@@ -12,7 +12,7 @@ export default class AmphibiansList extends React.Component {
 
     componentDidMount() {
         fetch(
-            "http://localhost:4000/api/v1/amphibians"
+            "https://esoo-rest-api.herokuapp.com/api/v1/amphibians"
         )
         .then((response) => response.json())
         .then((result) => this.setState({ amphibians: result }));

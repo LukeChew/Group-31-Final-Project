@@ -12,7 +12,7 @@ export default class InsectsList extends React.Component {
 
     componentDidMount() {
         fetch(
-            "http://localhost:4000/api/v1/insects"
+            "https://esoo-rest-api.herokuapp.com/api/v1/insects"
         )
         .then((response) => response.json())
         .then((result) => this.setState({ insects: result }));

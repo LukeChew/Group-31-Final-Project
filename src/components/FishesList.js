@@ -12,7 +12,7 @@ export default class FishesList extends React.Component {
 
     componentDidMount() {
         fetch(
-            "http://localhost:4000/api/v1/fishes"
+            "https://esoo-rest-api.herokuapp.com/api/v1/fishes"
         )
         .then((response) => response.json())
         .then((result) => this.setState({ fishes: result }));

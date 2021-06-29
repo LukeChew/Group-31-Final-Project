@@ -6,7 +6,7 @@ function ReptileListItem({ id, name }) {
     const [details, setDetails] = useState(null);
     function handleLoadDetails() { 
         fetch(
-        `http://localhost:4000/api/v1/reptiles/${id}`
+        `https://esoo-rest-api.herokuapp.com/api/v1/reptiles/${id}`
     )
         .then(response => response.json())
         .then(response => setDetails(response));
