@@ -12,7 +12,7 @@ export default class MammalsList extends React.Component {
 
     componentDidMount() {
         fetch(
-            "http://localhost:4000/api/v1/mammals"
+            "https://esoo-rest-api.herokuapp.com/api/v1/mammals"
         )
         .then((response) => response.json())
         .then((result) => this.setState({ mammals: result }));
