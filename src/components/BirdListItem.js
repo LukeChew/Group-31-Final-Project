@@ -6,7 +6,7 @@ function BirdListItem({ id, name }) {
     const [details, setDetails] = useState(null);
     function handleLoadDetails() { 
         fetch(
-        `https://esoo-react.herokuapp.com/api/v1/birds/${id}`
+        `https://esoo-rest-api.herokuapp.com//api/v1/birds/${id}`
     )
         .then(response => response.json())
         .then(response => setDetails(response));
