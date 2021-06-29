@@ -12,7 +12,7 @@ export default class BirdsList extends React.Component {
 
     componentDidMount() {
         fetch(
-            "https://esoo-react.herokuapp.com/api/v1/birds"
+            "https://esoo-rest-api.herokuapp.com/api/v1/birds"
         )
         .then((response) => response.json())
         .then((result) => this.setState({ birds: result }));
