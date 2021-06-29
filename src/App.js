@@ -6,6 +6,7 @@ import InsectsList from './components/InsectsList.js'
 import MammalsList from './components/MammalsList.js'
 import ReptilesList from './components/ReptilesList.js'
 
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -75,7 +76,15 @@ function App(props) {
 }
 
 function About() {
-  return <h2>About</h2>;
+  return (
+      <>
+          <h2>About Page</h2>
+          <p>This page lists information about the different classes and species of animals in Ontario that can fall under an endangerment category.
+          <br />All the information on this page comes from the following database: <a href="https://www.ontario.ca/page/species-risk-ontario">https://www.ontario.ca/page/species-risk-ontario</a>
+          <br /><br /><b>*None of the images used are owned by this domain</b>
+          </p>
+      </>
+  )
 }
 function Amphibian() {
   return <AmphibiansList />;
