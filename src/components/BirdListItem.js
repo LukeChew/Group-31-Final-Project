@@ -2,14 +2,36 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import BirdsDetails from './BirdsDetails'
 
+const GQL_API = `https://esoo-graphql.herokuapp.com/`;
+const GQL_QUERY = `
+query($id: ID!) {
+    bird (id: $id) {
+        name
+        species
+        location
+        status
+        date
+        photo
+    }
+    }
+`;
+
 function BirdListItem({ id, name }) {
     const [details, setDetails] = useState(null);
     function handleLoadDetails() { 
-        fetch(
-        `https://esoo-rest-api.herokuapp.com/api/v1/birds/${id}`
-    )
-        .then(response => response.json())
-        .then(response => setDetails(response));
+        const variables = { id: id };
+        fetch(GQL_API, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                query: GQL_QUERY,
+                variables,
+            }),
+        })
+            .then(response => response.json())
+            .then((result) => setDetails(result.data.bird));
     }
     return ( 
         <div>
