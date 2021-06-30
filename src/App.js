@@ -17,10 +17,12 @@ import {
 function App(props) {
   return (
     <div>
-      <h1>Endanged Species in Ontario</h1>
+      <h1>Endangered Species of Ontario</h1>
       <Router>
         <div>
           <nav>
+          <div>
+          <div>
             <ul>
               <li>
                 <Link to="/about">About</Link>
@@ -44,6 +46,8 @@ function App(props) {
                 <Link to="/reptile">Reptile</Link>
               </li>
             </ul>
+            </div>
+            </div>
           </nav>
 
           <Switch>

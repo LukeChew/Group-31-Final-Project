@@ -25,7 +25,7 @@ export default class FishesList extends React.Component {
     render() {
         return (
         <>
-            <h2>fishes List</h2>
+            <h2>Fishes List</h2>
             {this.renderFishes()}
         </>
         )

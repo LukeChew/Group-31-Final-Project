@@ -25,7 +25,7 @@ export default class AmphibiansList extends React.Component {
     render() {
         return (
         <>
-            <h2>amphibians List</h2>
+            <h2>Amphibians List</h2>
             {this.renderAmphibians()}
         </>
         )
