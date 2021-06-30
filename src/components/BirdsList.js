@@ -25,7 +25,7 @@ export default class BirdsList extends React.Component {
     render() {
         return (
         <>
-            <h2>birds List</h2>
+            <h2>Birds List</h2>
             {this.renderBirds()}
         </>
         )

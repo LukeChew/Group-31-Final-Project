@@ -25,7 +25,7 @@ export default class InsectsList extends React.Component {
     render() {
         return (
         <>
-            <h2>insects List</h2>
+            <h2>Insects List</h2>
             {this.renderInsects()}
         </>
         )
