@@ -18,7 +18,13 @@ query($id: ID!) {
 
 function BirdListItem({ id, name }) {
     const [details, setDetails] = useState(null);
+    const [count, setCount] = useState(0);
     function handleLoadDetails() { 
+        setCount(prevCount => prevCount + 1);
+        if(!(count%2 == 0)) {
+            setDetails(null);
+        }
+        else {
         const variables = { id: id };
         fetch(GQL_API, {
             method: 'POST',
@@ -32,6 +38,7 @@ function BirdListItem({ id, name }) {
         })
             .then(response => response.json())
             .then((result) => setDetails(result.data.bird));
+        }
     }
     return ( 
         <div>
